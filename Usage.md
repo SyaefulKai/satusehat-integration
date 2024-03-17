@@ -166,7 +166,7 @@ $patient->setDeceased('{boolean}');
 $patient->setAddress($address_detail);
 
 /*
- * Informasi tentang Marital Status dapat dilihat di: https://www.hl7.org/fhir/valueset-marital-status.html
+ * Informasi tentang Marital Status dapat dilihat di: https://www.hl7.org/fhir/R4/valueset-marital-status.html
  */
 $patient->setMaritalStatus('{marital_code}', '{marital_display}');
 
