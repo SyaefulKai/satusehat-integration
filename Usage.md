@@ -230,6 +230,10 @@ Hasil balikan dari POST & PUT adalah kode status HTTP dan response body (JSON)
 [$statusCode, $response] = $location->post();
 [$statusCode, $response] = $location->put('{location_id}');
 
+// Patient
+[$statusCode, $response] = $patient->post();
+// Patient tidak ada method put
+
 // Encounter
 [$statusCode, $response] = $encounter->post();
 [$statusCode, $response] = $encounter->put('{encounter_id}');
