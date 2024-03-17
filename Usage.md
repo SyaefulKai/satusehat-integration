@@ -147,6 +147,19 @@ $patient->setName('{nama_pasien}');
 */
 $patient->addTelecom('{telecom_code}', '{nomor_telecom}', '{telecom_use}');
 
+$address_detail = [
+    'address' => '{alamat}',
+    'city' => '{kota}',
+    'postalCode' => '{kode_pos}',
+    'country' => 'id-ID', // Kode negara
+    'provinceCode' => '{kode_provinsi}',
+    'cityCode' => '{kode_kabupaten/kota}',
+    'districtCode' => '{kode_kecamatan}',
+    'villageCode' => '{kode_wilayah}',
+    'rt' => '{rt}',
+    'rw' => '{rw}',
+];
+
 $patient->setGender('{male/female}');
 $patient->setBirthDate('{YYYY-MM-DD}');
 $patient->setDeceased('{boolean}');
