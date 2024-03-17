@@ -109,7 +109,7 @@ Pertama-tama import class dari FHIR Class Object :
 
 use Satusehat\Integration\FHIR\Organization;
 use Satusehat\Integration\FHIR\Location;
-use Satusehat\Integratoin\FHIR\Patient;
+use Satusehat\Integration\FHIR\Patient;
 use Satusehat\Integration\FHIR\Encounter;
 use Satusehat\Integration\FHIR\Condition;
 ```
@@ -144,8 +144,6 @@ $patient->setName('{nama_pasien}');
  *  Informasi tentang parameter addTelecom dapat dilihat di:
  *  telecom_code: https://www.hl7.org/fhir/R5/valueset-contact-point-system.html 
  *  telecom_use: https://www.hl7.org/fhir/R5/valueset-contact-point-use.html
- * 
- * 
 */
 $patient->addTelecom('{telecom_code}', '{nomor_telecom}', '{telecom_use}');
 
@@ -156,7 +154,6 @@ $patient->setAddress($address_detail);
 
 /*
  * Informasi tentang Marital Status dapat dilihat di: https://www.hl7.org/fhir/valueset-marital-status.html
- *
  */
 $patient->setMaritalStatus('{marital_code}', '{marital_display}');
 
