@@ -226,7 +226,6 @@ $encounter->addRegistrationId('{kode_registrasi}'); // unique string free text (
 $encounter->setArrived('{timestamp_kedatangan}');
 $encounter->setInProgress('{timestamp_mulai_pemeriksaan}', '{timestamp_akhir_pemeriksaan}');
 $encounter->setFinished('{timestamp_pulang}');
-
 $encounter->setConsultationMethod('{metode_konsultasi}'); // RAJAL, IGD, RANAP, HOMECARE, TELEKONSULTASI
 $encounter->setSubject('{id_patient}', '{nama_pasien}'); // ID SATUSEHAT Pasien dan Nama SATUSEHAT
 $encounter->addParticipant('{id_practitioner}', '{nama_dokter}'); // ID SATUSEHAT Dokter, Nama Dokter
@@ -236,10 +235,10 @@ $encounter->addLocation('{id_location}', '{nama_poli}'); // ID SATUSEHAT Locatio
 $condition1 = new Condition;
 $condition1->addClinicalStatus(); // active, inactive, resolved. Default bila tidak dideklarasi = active
 $condition1->addCategory('Diagnosis'); // Diagnosis, Keluhan. Default : Diagnosis
-$condition1->addCode('j06'); // Kode ICD10
-$condition1->setSubject('P02478375538', 'patient 1'); // ID SATUSEHAT Pasien dan Nama SATUSEHAT
-$condition1->setOnsetDateTime(now()); // timestamp onset. Timestamp sekarang
-$condition1->setRecordedDate(now()); // timestamp recorded. Timestamp sekarang
+$condition1->addCode('{kode_icd10}'); // Kode ICD10
+$condition1->setSubject('{id_pasien}', '{nama_pasien}'); // ID SATUSEHAT Pasien dan Nama SATUSEHAT
+$condition1->setOnsetDateTime({timestamp_onset}); // timestamp onset. Timestamp sekarang
+$condition1->setRecordedDate({timestamp_recorded}); // timestamp recorded. Timestamp sekarang
 $condition1->json();
 
 // Jika terdapat 2 condition
