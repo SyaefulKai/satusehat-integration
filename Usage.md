@@ -169,7 +169,7 @@ $patient->setAddress($address_detail);
 
 $patient->setMaritalStatus('{marital_status}');  // Married, unmarried, never, divorced, widowed
 
-$patient->setMultipleBirth('{boolean/integer}'); // Menunjukkan apakah pasien merupakan bagian dari kembar (boolean) atau menunjukkan urutan kelahiran yang sebenarnya (integer)
+$patient->setMultipleBirth('{integer}'); // menunjukkan urutan kelahiran yang sebenarnya
 
 $patient->setEmergencyContact('{nama_kontak}', '{nomor_kontak}');
 $patient->setCommunication(); // Bahasa pasien, default Indonesian
